@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.blog-page-header {
+  position: relative;
+  z-index: 0;
+}
 .blog-page-header .container .col .heading {
   font-size: 38px;
 }
@@ -12,7 +16,9 @@
 }
 
 .blogs {
+  position: relative;
   padding: 80px;
+  z-index: 0;
 }
 .blogs .container {
   display: flex;

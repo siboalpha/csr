@@ -9,6 +9,8 @@ $border-radius: 100px;
 }
 
 .blog-page-header {
+    position: relative;
+    z-index: 0;
     .container {
         .col {
             .heading {
@@ -24,8 +26,9 @@ $border-radius: 100px;
 }
 
 .blogs {
+    position: relative;
     padding: 80px;
-
+    z-index: 0;
     .container {
         display: flex;
         flex-wrap: wrap;
