@@ -16,3 +16,12 @@ def service2(request):
 
 def service3(request):
     return render(request, 'data-entry.html')
+
+def service4(request):
+    return render (request, 'payroll-management-and-funding.html')
+
+def service5(request):
+    return render(request, 'non-deposit-taking-micorfinance.html')
+
+def service6(request):
+    return render(request, 'financial-analysis-and-calculations-related-services.html')

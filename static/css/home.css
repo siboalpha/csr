@@ -415,11 +415,11 @@
   .why .container .why-section .why-image img {
     border-radius: 20px 20px 0 0;
   }
-  .services-section .container .services .service {
+  .services-section .container .services a .service {
     max-width: 100%;
     padding: 20px;
   }
-  .services-section .container .services .service .serive-title img {
+  .services-section .container .services a .service .serive-title img {
     max-width: 32px;
   }
   .call-to-actiom {

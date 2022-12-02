@@ -484,12 +484,14 @@ $border-radius: 100px;
     .services-section {
         .container {
             .services {
-                .service {
-                    max-width: 100%;
-                    padding: 20px;
-                    .serive-title {
-                        img {
-                            max-width: 32px;
+                a {
+                    .service {
+                        max-width: 100%;
+                        padding: 20px;
+                        .serive-title {
+                            img {
+                                max-width: 32px;
+                            }
                         }
                     }
                 }

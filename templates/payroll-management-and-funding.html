@@ -1,44 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/navigation.css">
-    <link rel="stylesheet" href="/css/services.css">
-
-    <link rel="icon" type="image/x-icon" href="/img/csr logo.svg">
+    <link rel="stylesheet" href="{% static '/css/services.css' %}">
     <title>CSR | Payroll Management and Funding</title>
 </head>
 <body>
-    <header class="">
-        <nav class="navbar">
-            <div class="brand">
-                <a href="/">
-                    <img class="logo" src="/img/csr logo.svg" alt="">
-                <p class="site-title">Comprehensive Staffing <br>
-                    Resources Ltd(CSR)
-                </p>
-                </a>     
-            </div>
-            <div class="menu-bar" id="menuBtn" href="" onclick="OpenCloseMenu()">
-                <img id="OpenMenu" src="/img/icons/menu-bar.svg" alt="">
-                <img id="CloseMenu" src="/img/icons/close.svg" alt="">
-            </div>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a class="menu-link" href="/index.html">Welcome</a>
-                <a class="menu-link" href="#about">About Us</a>
-                <a class="menu-link" href="#services">Services</a>
-                <a class="menu-link" href="#gallery">Gallery</a>
-                <a class="menu-link" href="/blog.html">Our Blog</a>
-                <a class="menu-link" href="#get-in-touch">
-                    <button class="btn-outil">Contact us <span><img src="/img/icons/support.svg" alt=""></span></button>
-                </a>
-            </div>
-        </nav>
-    </header>
+    {% include 'navbar.html' %}
 
     <section class="section-header">
         
@@ -61,55 +29,16 @@
                     Our funding is on a one-off commission which is agreed in a contract.
                 </p>
                 <a href="">
-                    <button>Hire a talent <span><img src="/img/icons/angle right.svg" alt=""></span></button>
+                    <button>Hire a talent <span><img src="{% static '/img/icons/angle right.svg' %}" alt=""></span></button>
                 </a>
             </div>
 
             <div class="col">
-                <img src="/img/kabibi.webp" alt="">
+                <img src="{% static '/img/kabibi.webp' %}" alt="">
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="company">
-                <h2 class="company-title">
-                    About the company
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. 
-                </p>
-    
-                <div class="copy-rights">
-                    <img class="copy-rghts-icon" src="/img/icons/copy-rghts.svg" alt="">
-                    <p>
-                        All rights reserved. Design by <span>Alphonse</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="site-map">
-                <div class="social-media-icons">
-                    <a href=""><img src="/img/icons/facebook.pdf" alt=""></a>
-                    <a href=""><img src="/img/icons/insta.svg" alt=""></a>
-                    <a href=""><img src="/img/icons/youtube.svg" alt=""></a>
-                    <a href=""><img src="/img/icons/twiter.svg" alt=""></a>
-                    <a href=""><img src="/img/icons/linkedin.svg" alt=""></a>
-                </div>
-
-                <div class="footer-menu">
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">Services</a>
-                    <a href="">Carelly</a>
-                    <a href="">Get in touch</a>
-                </div>
-            </div>
-            
-        </div>
-    </footer>
-
-    <script src="/js/nav.js"></script>
+    {% include 'footer.html' %}
+    {% endblock %}
 </body>
-</html>
