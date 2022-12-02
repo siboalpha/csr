@@ -1,0 +1,128 @@
+$color-blue: #3461E2;
+$color-blue-fade: #E5EAFB;
+$whitesmoke: #F6F9FE;
+$tex-color: #3D3D3D;
+$border-radius: 100px;
+
+.blog-header {
+    padding-top: 80px;
+    .container {
+        .col {
+            .blog-title {
+                font-size: 32px;
+            }
+
+            .meta {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .meta-item {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        img {
+                            width: 32px;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    align-items: flex-start;
+    position: relative;
+
+    .container {
+        position: relative;
+        align-items: flex-start;
+        .content {
+            width: 70%;
+            background-color: $whitesmoke;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .side-bar {
+            width: 30%;
+            background-color: $whitesmoke;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position:sticky;
+            top: 90px;
+            .services {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                a {
+                    .service {
+                        display: flex;
+                        align-items: center;
+                        padding: 20px;
+                        background-color: white;
+                        border-radius: 20px;
+                        gap: 15px;
+                        img {
+                            width: 42px;
+                            border-radius: 0;
+                        }
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Mobile
+
+@media screen and (max-width: 740px) {
+    .blog-header {
+        padding-top: 20px;
+        .container {
+            flex-direction: column-reverse;
+            .col {
+                .blog-title {
+                    font-size: 24px;
+                }
+                .meta {
+                    .meta-item {
+                        a {
+                            gap: 5px;
+                            img {
+                                width: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-content {
+        padding-top: 20px;
+        padding-bottom:20px;
+        
+        .container {
+            flex-direction: column;
+            .content {
+                width: 100%;
+            }
+            .side-bar {
+                display: none
+            };
+        }
+        
+        
+    }
+}

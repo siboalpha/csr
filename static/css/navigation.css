@@ -1,0 +1,90 @@
+header {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  height: 92px;
+  margin-top: 20px;
+  padding-right: 20px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.621);
+  z-index: 2;
+}
+.navbar .brand a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+}
+.navbar .brand a .logo {
+  max-width: 60px;
+}
+.navbar .menu-bar {
+  display: none;
+}
+.navbar .close-menu {
+  display: none;
+}
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navbar .nav-menu .active {
+  color: #3461E2;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header {
+    max-width: 100%;
+    padding: 0;
+  }
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+    margin: 0;
+    position: relative;
+    background-color: white;
+    border-radius: 0;
+    transition: height 0.3s;
+  }
+  .navbar .brand .logo {
+    max-width: 40px;
+  }
+  .navbar .brand .site-title {
+    font-size: 16px;
+  }
+  .navbar .nav-menu {
+    background-color: rgba(255, 255, 255, 0.889);
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 70px;
+    right: -20px;
+    left: -20px;
+    z-index: 2;
+    padding: 30px 0;
+    display: none;
+  }
+  .navbar .menu-bar {
+    display: block;
+  }
+  .navbar .menu-bar #CloseMenu {
+    display: none;
+  }
+  .navbar .menu-bar img {
+    width: 30px;
+    align-self: flex-end;
+  }
+}/*# sourceMappingURL=navigation.css.map */

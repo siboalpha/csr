@@ -1,0 +1,19 @@
+$color-blue: #3461E2;
+$color-blue-fade: #E5EAFB;
+$whitesmoke: #F6F9FE;
+$tex-color: #3D3D3D;
+$border-radius: 100px;
+
+.container {
+    max-width: 100%;
+    .under-construction {
+        width: 100%;
+        height: 100vh;
+        background-color: $tex-color;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

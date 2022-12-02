@@ -1,0 +1,100 @@
+.blog-header {
+  padding-top: 80px;
+}
+.blog-header .container .col .blog-title {
+  font-size: 32px;
+}
+.blog-header .container .col .meta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.blog-header .container .col .meta .meta-item a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.blog-header .container .col .meta .meta-item a img {
+  width: 32px;
+  border-radius: 0;
+}
+
+.blog-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  align-items: flex-start;
+  position: relative;
+}
+.blog-content .container {
+  position: relative;
+  align-items: flex-start;
+}
+.blog-content .container .content {
+  width: 70%;
+  background-color: #F6F9FE;
+  padding: 20px;
+  border-radius: 20px;
+}
+.blog-content .container .side-bar {
+  width: 30%;
+  background-color: #F6F9FE;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+}
+.blog-content .container .side-bar .services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-content .container .side-bar .services a .service {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  gap: 15px;
+}
+.blog-content .container .side-bar .services a .service img {
+  width: 42px;
+  border-radius: 0;
+}
+.blog-content .container .side-bar .services a .service p {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 740px) {
+  .blog-header {
+    padding-top: 20px;
+  }
+  .blog-header .container {
+    flex-direction: column-reverse;
+  }
+  .blog-header .container .col .blog-title {
+    font-size: 24px;
+  }
+  .blog-header .container .col .meta .meta-item a {
+    gap: 5px;
+  }
+  .blog-header .container .col .meta .meta-item a img {
+    width: 22px;
+  }
+  .blog-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .blog-content .container {
+    flex-direction: column;
+  }
+  .blog-content .container .content {
+    width: 100%;
+  }
+  .blog-content .container .side-bar {
+    display: none;
+  }
+}/*# sourceMappingURL=single-blog.css.map */
