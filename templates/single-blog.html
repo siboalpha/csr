@@ -7,57 +7,31 @@
 </head>
 
 <body>
-    <header class="">
-        <nav class="navbar">
-            <div class="brand">
-                <a href="/">
-                    <img class="logo" src="{% static '/img/csr logo.svg' %}" alt="">
-                <p class="site-title">Comprehensive Staffing <br>
-                    Resources Ltd(CSR)
-                </p>
-                </a>     
-            </div>
-            <div class="menu-bar" id="menuBtn" href="" onclick="OpenCloseMenu()">
-                <img id="OpenMenu" src="{% static '/img/icons/menu-bar.svg' %}" alt="">
-                <img id="CloseMenu" src="{% static '/img/icons/close.svg' %}" alt="">
-            </div>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a class="menu-link" href="/index.html">Welcome</a>
-                <a class="menu-link" href="#about">About Us</a>
-                <a class="menu-link" href="#services">Services</a>
-                <a class="menu-link" href="#gallery">Gallery</a>
-                <a class="menu-link" href="/blog.html">Our Blog</a>
-                <a class="menu-link" href="#get-in-touch">
-                    <button class="btn-outil">Contact us <span><img src="{% static '/img/icons/support.svg' %}" alt=""></span></button>
-                </a>
-            </div>
-        </nav>
-    </header>
+    {% include 'navbar.html' %}
 
     <section class="blog-header">
         <div class="container">
             <div class="col">
                 <h1 class="heading blog-title">
-                    Learn about Book keeping and outsourcig of staff in this blog
+                    {{blog.title}}
                 </h1>
 
                 <div class="meta">
                     <div class="meta-item"><a href=""><img src="{% static '/img/icons/folder.svg' %}" alt="">
-                            <p>Resourcing staffing</p>
+                            <p>{{blog.category}}</p>
                         </a></div>
                     <div class="meta-item"><a href=""><img src="{% static '/img/icons/author.svg' %}" alt="">
-                            <p>Patient BIZIMANA</p>
+                            <p>{{blog.author}}</p>
                         </a></div>
                     <div class="meta-item"><a href=""><img src="{% static '/img/icons/calendar.svg' %}" alt="">
-                            <p>11/12/2022</p>
+                            <p>{{blog.date_created|date:"M d, Y"}}</p>
                         </a></div>
                 </div>
 
             </div>
 
             <div class="col featured-image">
-                <img src="{% static '/img/brooke-cagle--uHVRvDr7pg-unsplash.jpg' %}" alt="">
+                <img src="{{blog.featured_image.url}}" alt="">
             </div>
         </div>
     </section>
@@ -65,85 +39,7 @@
     <section class="blog-content">
         <div class="container">
             <div class="col content">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing
-                    elit Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque sit amet sapien fringilla, mattis
-                    ligula consectetur, ultrices mauris. Maecenas vitae
-                    mattis tellus. Nullam quis imperdiet augue.
-                    Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at
-                    maximus
-                    ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales
-                    . Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget
-                    tempus orci facilisis id. Praesent lorem orci, mattis non efficitur id, ultricies vel nibh. Sed
-                    volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus, magna id scelerisque
-                    vestibulum, nulla ex pharetra sapien, tempor posuere massa neque nec felis. Aliquam sem ipsum,
-                    vehicula ac tortor vel, egestas ullamcorper dui. Curabitur at risus sodales, tristique est id,
-                    euismod justo. Mauris nec leo non libero sodales lobortis. Quisque a neque pretium, dictum tellus
-                    vitae, euismod neque.
-                </p>
-
-                <img src="{% static '/img/kabibi.webp' %}" alt="">
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
-                    mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
-                    interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque
-                    commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat
-                    placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non
-                    efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit.
-                    Proin tempus, magna id scelerisque vestibulum, nulla ex pharetra sapien, tempor posuere massa neque
-                    nec felis. Aliquam sem ipsum, vehicula ac tortor vel, egestas ullamcorper dui. Curabitur at risus
-                    sodales, tristique est id, euismod justo. Mauris nec leo non libero sodales lobortis. Quisque a
-                    neque pretium, dictum tellus vitae, euismod neque. Nulla facilisi. Phasellus ultricies dignissim
-                    nibh ut cursus. Nam et quam sit amet turpis finibus maximus tempor eget augue. Aenean at ultricies
-                    lorem. Sed egestas ligula tortor, sit amet mattis ex feugiat non. Duis purus diam, dictum et ante
-                    at, commodo iaculis urna. Aenean lacinia, nisl id vehicula condimentum, enim massa tempor nibh,
-                    vitae volutpat sapien metus aliquet nisl. Etiam dui eros, tincidunt tristique blandit id, gravida
-                    vitae augue. Proin imperdiet mi nec justo convallis gravida. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac
-                </p>
-
-                <img src="{% static '/img/Data entry service.webp' %}" alt="">
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
-                    mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna
-                    interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque
-                    commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat
-                    placerat. In iaculis arcu eros, eget tempus orci facilisis id. Praesent lorem orci, mattis non
-                    efficitur id, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit.
-                    Proin tempus, magna id scelerisque vestibulum, nulla ex pharetra sapien, tempor posuere massa neque
-                    nec felis. Aliquam sem ipsum, vehicula ac tortor vel, egestas ullamcorper dui. Curabitur at risus
-                    sodales, tristique est id, euismod justo. Mauris nec leo non libero sodales lobortis. Quisque a
-                    neque pretium, dictum tellus vitae, euismod neque. Nulla facilisi. Phasellus ultricies dignissim
-                    nibh ut cursus. Nam et quam sit amet turpis finibus maximus tempor eget augue. Aenean at ultricies
-                    lorem. Sed egestas ligula tortor, sit amet mattis ex feugiat non. Duis purus diam, dictum et ante
-                    at, commodo iaculis urna. Aenean lacinia, nisl id vehicula condimentum, enim massa tempor nibh,
-                    vitae volutpat sapien metus aliquet nisl. Etiam dui eros, tincidunt tristique blandit id, gravida
-                    vitae augue. Proin imperdiet mi nec justo convallis gravida. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas. Mauris consectetur nibh in mattis commodo.
-                    Etiam in pellentesque eros. Etiam tempus fermentum tincidunt. Duis sit amet nisl consectetur,
-                    pharetra nibh vitae, egestas urna. Nam auctor mauris ut diam viverra vehicula. Aenean congue
-                    faucibus nunc nec ornare. Proin sem risus, convallis quis volutpat et, sollicitudin at urna. Duis
-                    molestie odio orci, vel auctor velit posuere scelerisque. Vestibulum eget dictum libero. Nam finibus
-                    turpis ac eleifend suscipit. Vivamus auctor sollicitudin placerat. Etiam turpis ligula, lobortis id
-                    fringilla quis, rhoncus a quam. Nulla commodo, lacus vel placerat aliquam, velit quam mollis lacus,
-                    gravida iaculis eros orci sit amet augue. Sed semper ac lectus sed dapibus. Duis non tortor arcu.
-                    Aenean euismod, purus sit amet vestibulum maximus, augue sem fermentum arcu, ac elementum dui libero
-                    at urna. Quisque vitae pharetra ligula. Vestibulum sollicitudin, odio in dictum condimentum, enim
-                    sem placerat nunc, vitae dictum arcu nunc eget quam. Ut quis massa eget lectus condimentum porttitor
-                    sed ultricies ipsum. Duis est lectus, bibendum eget suscipit quis, scelerisque vitae augue. In a
-                    risus a odio pellentesque lacinia nec eget dui. Nunc mollis arcu sed tortor laoreet eleifend.
-                    Phasellus id justo laoreet, pulvinar est mattis, sodales mauris. Orci varius natoque penatibus et
-                    magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eget augue cursus, vulputate
-                    velit ut, rhoncus eros. Nullam rhoncus id nulla non rhoncus. Donec molestie lorem vel varius
-                    condimentum. Phasellus at condimentum erat. Praesent eu ullamcorper elit. Fusce tempor neque neque,
-                    commodo mattis sapien finibus et. Proin venenatis nisl dui, eget posuere justo bibendum vel. Morbi
-                    in ullamcorper risus. Aliquam eu tortor lorem. Duis mattis ligula eu dolor dignissim semper..
-                </p>
+                {{blog.blog_content|safe}}
             </div>
 
             <div class="col side-bar">

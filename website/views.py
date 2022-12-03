@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import *
+from .models import *
 # Create your views here.
 
 def index(request):
@@ -14,11 +15,15 @@ def index(request):
     context = {'form': form}
     return render(request, 'index.html', context)
 
-def blog(request):
-    return render(request, 'single-blog.html')
+def blog(request, slug):
+    blog = Blog.objects.get(slug=slug)
+    context = {'blog':blog}
+    return render(request, 'single-blog.html', context)
 
 def blogs(request):
-    return render(request, 'blogs.html')
+    blogs = Blog.objects.filter(status='Published')
+    context = {'blogs':blogs}
+    return render(request, 'blogs.html', context)
 
 def thankYou(request):
     return render(request, 'thank-you.html')

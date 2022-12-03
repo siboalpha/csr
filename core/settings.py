@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +127,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_UPLOAD_PATH = 'media/blog/'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'height': '100%',
+        'width': '100%',
+    },
+}
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 # Default primary key field type

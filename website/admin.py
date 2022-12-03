@@ -4,4 +4,14 @@ from . models import *
 # Register your models here.
 @admin.register(contactMessage)
 class contactMessageAdmin(admin.ModelAdmin):
-    list_display = 'name', 'phone_number', 'email'
+    list_display = ('name', 'phone_number', 'email')
+
+@admin.register(Blog)
+class blogAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'author', 'date_created', 'status')
+    prepopulated_fields = {"slug": ("title",)}
+
+@admin.register(Category)
+class categoryAdmin(admin.ModelAdmin):
+    list_display = ('category','slug')
+    prepopulated_fields = {"slug": ("category",)}

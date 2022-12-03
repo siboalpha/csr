@@ -24,61 +24,19 @@
 
     <section class="blogs">
         <div class="container">
-            <a href="{% url 'blog' %}">
+            {% for blog in blogs %}
+            <a href="{{blog.get_absolute_url}}">
                 <div class="blog">
-                    <img src="{% static '/img/Data entry service.webp' %}" alt="">
+                    <img src="{{blog.featured_image.url}}" alt="">
                     <div class="blog-summary">
-                        <h3 class="title">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut </h3>
+                        <h3 class="title">{{blog.title|truncatechars:45}}</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+                            {{blog.blog_summary|truncatechars:155}}
                         </p>
                     </div>
                 </div>
             </a>
-            <a href="{% url 'blog' %}">
-                <div class="blog">
-                    <img src="{% static '/img/Data entry service.webp' %}" alt="">
-                    <div class="blog-summary">
-                        <h3 class="title">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="{% url 'blog' %}">
-                <div class="blog">
-                    <img src="{% static '/img/Data entry service.webp' %}" alt="">
-                    <div class="blog-summary">
-                        <h3 class="title">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="{% url 'blog' %}">
-                <div class="blog">
-                    <img src="{% static '/img/Data entry service.webp' %}" alt="">
-                    <div class="blog-summary">
-                        <h3 class="title">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="{% url 'blog' %}">
-                <div class="blog">
-                    <img src="{% static '/img/Data entry service.webp' %}" alt="">
-                    <div class="blog-summary">
-                        <h3 class="title">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-                        </p>
-                    </div>
-                </div>
-            </a>
+            {% endfor %}
         </div>
     </section>
 
