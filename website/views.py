@@ -1,12 +1,27 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .forms import *
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    form = ContactForm()
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('thank-you')
+    context = {'form': form}
+    return render(request, 'index.html', context)
 
 def blog(request):
-    return render(request, 'blog.html')
+    return render(request, 'single-blog.html')
+
+def blogs(request):
+    return render(request, 'blogs.html')
+
+def thankYou(request):
+    return render(request, 'thank-you.html')
 
 def service1(request):
     return render(request, 'book-keeping-and-outsourcing-of-staff.html')

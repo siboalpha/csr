@@ -1,0 +1,13 @@
+.container {
+  max-width: 100%;
+  text-align: center;
+}
+.container .thank-you {
+  width: 100%;
+  height: 100vh;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=thank-you.css.map */

@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/navigation.css">
-    <link rel="stylesheet" href="/css/single-blog.css">
-
-    <link rel="icon" type="image/x-icon" href="/img/csr logo.svg">
+    <link rel="stylesheet" href="{% static '/css/single-blog.css' %}">
     <title>CSR | Blog</title>
 </head>
 
@@ -18,15 +11,15 @@
         <nav class="navbar">
             <div class="brand">
                 <a href="/">
-                    <img class="logo" src="/img/csr logo.svg" alt="">
+                    <img class="logo" src="{% static '/img/csr logo.svg' %}" alt="">
                 <p class="site-title">Comprehensive Staffing <br>
                     Resources Ltd(CSR)
                 </p>
                 </a>     
             </div>
             <div class="menu-bar" id="menuBtn" href="" onclick="OpenCloseMenu()">
-                <img id="OpenMenu" src="/img/icons/menu-bar.svg" alt="">
-                <img id="CloseMenu" src="/img/icons/close.svg" alt="">
+                <img id="OpenMenu" src="{% static '/img/icons/menu-bar.svg' %}" alt="">
+                <img id="CloseMenu" src="{% static '/img/icons/close.svg' %}" alt="">
             </div>
             </div>
             <div class="nav-menu" id="nav-menu">
@@ -36,7 +29,7 @@
                 <a class="menu-link" href="#gallery">Gallery</a>
                 <a class="menu-link" href="/blog.html">Our Blog</a>
                 <a class="menu-link" href="#get-in-touch">
-                    <button class="btn-outil">Contact us <span><img src="/img/icons/support.svg" alt=""></span></button>
+                    <button class="btn-outil">Contact us <span><img src="{% static '/img/icons/support.svg' %}" alt=""></span></button>
                 </a>
             </div>
         </nav>
@@ -50,13 +43,13 @@
                 </h1>
 
                 <div class="meta">
-                    <div class="meta-item"><a href=""><img src="/img/icons/folder.svg" alt="">
+                    <div class="meta-item"><a href=""><img src="{% static '/img/icons/folder.svg' %}" alt="">
                             <p>Resourcing staffing</p>
                         </a></div>
-                    <div class="meta-item"><a href=""><img src="/img/icons/author.svg" alt="">
+                    <div class="meta-item"><a href=""><img src="{% static '/img/icons/author.svg' %}" alt="">
                             <p>Patient BIZIMANA</p>
                         </a></div>
-                    <div class="meta-item"><a href=""><img src="/img/icons/calendar.svg" alt="">
+                    <div class="meta-item"><a href=""><img src="{% static '/img/icons/calendar.svg' %}" alt="">
                             <p>11/12/2022</p>
                         </a></div>
                 </div>
@@ -64,7 +57,7 @@
             </div>
 
             <div class="col featured-image">
-                <img src="/img/brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="">
+                <img src="{% static '/img/brooke-cagle--uHVRvDr7pg-unsplash.jpg' %}" alt="">
             </div>
         </div>
     </section>
@@ -90,7 +83,7 @@
                     vitae, euismod neque.
                 </p>
 
-                <img src="/img/kabibi.webp" alt="">
+                <img src="{% static '/img/kabibi.webp' %}" alt="">
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
@@ -112,7 +105,7 @@
                     senectus et netus et malesuada fames ac
                 </p>
 
-                <img src="/img/Data entry service.webp" alt="">
+                <img src="{% static '/img/Data entry service.webp' %}" alt="">
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
@@ -158,7 +151,7 @@
                 <div class="services">
                     <a href="/book-keeping-and-outsourcing-of-staff.html">
                         <div class="service">
-                            <img src="/img/icons/book.svg" alt="">
+                            <img src="{% static '/img/icons/book.svg' %}" alt="">
                             <p>
                                 Bookkeeping and
                                 Outsourcing of Staff
@@ -168,7 +161,7 @@
 
                     <a href="/customer-support.html">
                         <div class="service">
-                            <img src="/img/icons/support blue.svg" alt="">
+                            <img src="{% static '/img/icons/support blue.svg' %}" alt="">
                             <p>
                                 Customer Support
                                 services
@@ -178,7 +171,7 @@
 
                     <a href="/financial-analysis-and-calculations-related-services.html">
                         <div class="service">
-                            <img src="/img/icons/calculator.svg" alt="">
+                            <img src="{% static '/img/icons/calculator.svg' %}" alt="">
                             <p>
                                 Financial analysis
                                 and calculations
@@ -188,7 +181,7 @@
 
                     <a href="/non-deposit-taking-micorfinance.html">
                         <div class="service">
-                            <img src="/img/icons/percentage.svg" alt="">
+                            <img src="{% static '/img/icons/percentage.svg' %}" alt="">
                             <p>
                                 Non-deposit-taking
                                 microfinance
@@ -198,7 +191,7 @@
 
                     <a href="/data-entry.html">
                         <div class="service">
-                            <img src="/img/icons/table.svg" alt="">
+                            <img src="{% static '/img/icons/table.svg' %}" alt="">
                             <p>
                                 Data Entry
                                 Service
@@ -208,7 +201,7 @@
 
                     <a href="/payroll-management-and-funding.html">
                         <div class="service">
-                            <img src="/img/icons/list money.svg" alt="">
+                            <img src="{% static '/img/icons/list money.svg' %}" alt="">
                             <p>
                                 Payroll Management
                                 and Funding
@@ -219,7 +212,6 @@
             </div>
         </div>
     </section>
-
+    {% include 'footer.html' %}
+    {% endblock %}
 </body>
-
-</html>

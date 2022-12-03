@@ -6,6 +6,8 @@ $border-radius: 100px;
 
 .blog-header {
     padding-top: 80px;
+    position: relative;
+    z-index: 0;
     .container {
         .col {
             .blog-title {
@@ -38,7 +40,7 @@ $border-radius: 100px;
     padding-bottom: 80px;
     align-items: flex-start;
     position: relative;
-
+    z-index: 0;
     .container {
         position: relative;
         align-items: flex-start;
@@ -86,7 +88,7 @@ $border-radius: 100px;
 
 //Mobile
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 540px) {
     .blog-header {
         padding-top: 20px;
         .container {
