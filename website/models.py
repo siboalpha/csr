@@ -36,7 +36,7 @@ class Blog(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_DEFAULT, default='uncategorised')
     author = models.CharField(max_length=255)
     status = models.CharField(max_length=255, choices=STATUS_CHOICES, default=draft)
-    featured_image = models.ImageField(upload_to='media/blog/featured_images')
+    featured_image = models.ImageField(upload_to='blog/featured_images')
     blog_summary = models.TextField(max_length=255, default=defaul_summary)
     blog_content = RichTextUploadingField()
     date_created = models.DateTimeField(auto_now_add=True)
