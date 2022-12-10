@@ -47,3 +47,12 @@ class Blog(models.Model):
     def get_absolute_url(self):
         return reverse('blog', kwargs={'slug': self.slug})
     
+
+class Feature(models.Model):
+    title = models.CharField(max_length=255)
+    article_link = models.URLField(max_length=255, null=True)
+    featured_image = models.ImageField(upload_to='features/featured_images')
+    news_paper = models.TextField(max_length=255, default='Igihe') 
+    date_featured = models.DateTimeField(auto_now_add=False, null= True)
+    def __str__(self):
+        return self.title

@@ -5,94 +5,81 @@ $tex-color: #3D3D3D;
 $border-radius: 100px;
 
 .hero {
-    overflow: hidden;
+    padding-top: 50px;
     position: relative;
-    margin-top: -112px;
     z-index: 0;
-    &::after {
-        content: url('/static/img/hero\ image.png');
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-    }
     .container {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        align-items: flex-start;
-        gap: 150px;
+        align-items: center;
+        gap: 50px;
         .intro {
+            text-align: center;
+            width: 50%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 20px;
-            width: 50%;
             background-color: rgba(255, 255, 255, 0.831);
             padding: 30px 30px 30px 0px;
             border-radius: 50px;
-            .buttons {
-                .youtube {
-                    display: flex;
-                    gap: 15px;
-                    cursor: pointer;
-                    .play-btn {
-                        max-width: 38px;
-                    }
-                    .link {
-                        text-decoration: underline;
-                    }
-                }
-            }
         }
-    
-        .social-proof {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            row-gap: 20px;
-            .proof {
-                width: 235px;
-                display: flex;
-                gap: 5px;
-                border-radius: $border-radius;
-                background-color: $whitesmoke;
-                padding: 10px 20px;
-                .icon {
-                    width: 39px;
-                }
-            }
-            .active {
-                background-color: $color-blue;
-                color: white;
-            }
-        }
-    }
 
-    .pop-up {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 20vh;
-        bottom: 10vh;
-        right: 0;
-        left: 0;
-        display: none;
-
-        .pop-up-video {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+        .promo-video {
+            position: relative;
+            background: url('/static/img/csr-lanch.webp');
+            background-position: center;
+            background-size: cover;
+            height: 600px;
             width: 100%;
-            .close-pop-up {
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $whitesmoke;
+            .pop-up {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -50px;
+                right: 0;
+                left: 0;
+                display: none;
+                z-index: 3;
+                .pop-up-video {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 100%;
+                    height: 600px;
+                    .close-pop-up {
+                        cursor: pointer;
+                        img {
+                            background-color: white;
+                            height: 44px;
+                            padding: 10px;
+                            border-radius: 34px;
+                        }
+                    }
+                }
+            }
+            .youtube {
+                display: flex;
+                gap: 15px;
+                background-color: #3462e2d3;
+                padding: 10px;
+                border-radius: 38px;
                 cursor: pointer;
-                img {
-                    background-color: white;
-                    height: 44px;
-                    padding: 10px;
-                    border-radius: 34px;
+                .play-btn {
+                    max-width: 38px;
+                    border-radius: 38px;
+                    background-color: $whitesmoke;
+                }
+                .link {
+                    text-decoration: underline;
                 }
             }
         }
@@ -104,7 +91,7 @@ $border-radius: 100px;
     .container {
         padding: 50px;
         background-color: $whitesmoke;
-        border-radius: 50px;
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -118,7 +105,7 @@ $border-radius: 100px;
             .why-image {
                 width: 50%;
                 img {
-                    border-radius: 50px;
+                    border-radius: 20px;
                 }
             }
         }
@@ -414,34 +401,24 @@ $border-radius: 100px;
 
 @media screen and (max-width: 540px) {
     .hero {
-        overflow: unset;
-        overflow-x: hidden;
-        height: auto;
-        padding-top: 300px;
-        &::after {
-            right: -400px;
-        }
+        padding-top: 50px;
         .container {
-            gap: 50px;
+            gap: 10px;
             .intro {
                 width: 100%;
-                background-color: rgba(245, 245, 245, 0.831);
-                padding: 30px;
-                border-radius: 20px;
-
                 .buttons {
                     display: flex;
                     flex-direction: column;
                 }
             }
 
-            .social-proof {
-                row-gap: 20px;
-                .proof {
-                    font-size: 16px;
-                    width: 100%;
-                    .icon {
-                        width: 29px;
+            .promo-video {
+                height: 220px;
+                width: 100%;
+                .pop-up {
+                    .pop-up-video {
+                        height: 300px;
+                        width: 100%;
                     }
                 }
             }

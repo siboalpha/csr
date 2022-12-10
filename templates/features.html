@@ -2,18 +2,18 @@
 {% load static %}
 {% block content %}
 <head>
-    <link rel="stylesheet" href="{% static '/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static '/css/features.css' %}">
 
     <link rel="icon" type="image/x-icon" href="/img/csr logo.svg">
-    <title>CSR | Checkout our blog</title>
+    <title>CSR | Checkout our feature</title>
 </head>
 <body>
     {% include 'navbar.html' %}
 
-    <div class="blog-page-header">
+    <div class="feature-page-header">
         <div class="container">
             <div class="col">
-                <h1 class="heading">Check out our blogs recently published</h1>
+                <h1 class="heading">Checkout artricles that we were featured in</h1>
             </div>
 
             <div class="col">
@@ -22,16 +22,16 @@
         </div>
     </div>
 
-    <section class="blogs">
+    <section class="features">
         <div class="container">
-            {% for blog in blogs %}
-            <a href="{{blog.get_absolute_url}}">
-                <div class="blog">
-                    <img src="{{blog.featured_image.url}}" alt="">
-                    <div class="blog-summary">
-                        <h3 class="title">{{blog.title|truncatechars:45}}</h3>
+            {% for feature in features %}
+            <a href="{{feature.article_link}}" target="_blank">
+                <div class="feature">
+                    <img src="{{feature.featured_image.url}}" alt="">
+                    <div class="feature-summary">
+                        <h3 class="title">{{feature.title|truncatechars:45}}</h3>
                         <p>
-                            {{blog.blog_summary|truncatechars:155}}
+                            {{feature.news_paper|truncatechars:25}}
                         </p>
                     </div>
                 </div>

@@ -25,6 +25,11 @@ def blogs(request):
     context = {'blogs':blogs}
     return render(request, 'blogs.html', context)
 
+def features(request):
+    features = Feature.objects.all()
+    context = {'features':features}
+    return render(request, 'features.html', context)
+
 def thankYou(request):
     return render(request, 'thank-you.html')
 

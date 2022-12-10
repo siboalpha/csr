@@ -1,91 +1,82 @@
 .hero {
-  overflow: hidden;
+  padding-top: 50px;
   position: relative;
-  margin-top: -112px;
   z-index: 0;
 }
-.hero::after {
-  content: url("/static/img/hero image.png");
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
 .hero .container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: flex-start;
-  gap: 150px;
+  align-items: center;
+  gap: 50px;
 }
 .hero .container .intro {
+  text-align: center;
+  width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
-  width: 50%;
   background-color: rgba(255, 255, 255, 0.831);
   padding: 30px 30px 30px 0px;
   border-radius: 50px;
 }
-.hero .container .intro .buttons .youtube {
+.hero .container .promo-video {
+  position: relative;
+  background: url("/static/img/csr-lanch.webp");
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  border-radius: 20px;
   display: flex;
-  gap: 15px;
-  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: #F6F9FE;
 }
-.hero .container .intro .buttons .youtube .play-btn {
-  max-width: 38px;
-}
-.hero .container .intro .buttons .youtube .link {
-  text-decoration: underline;
-}
-.hero .container .social-proof {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 20px;
-}
-.hero .container .social-proof .proof {
-  width: 235px;
-  display: flex;
-  gap: 5px;
-  border-radius: 100px;
-  background-color: #F6F9FE;
-  padding: 10px 20px;
-}
-.hero .container .social-proof .proof .icon {
-  width: 39px;
-}
-.hero .container .social-proof .active {
-  background-color: #3461E2;
-  color: white;
-}
-.hero .pop-up {
+.hero .container .promo-video .pop-up {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 20vh;
-  bottom: 10vh;
+  top: -50px;
   right: 0;
   left: 0;
   display: none;
+  z-index: 3;
 }
-.hero .pop-up .pop-up-video {
+.hero .container .promo-video .pop-up .pop-up-video {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
+  height: 600px;
 }
-.hero .pop-up .pop-up-video .close-pop-up {
+.hero .container .promo-video .pop-up .pop-up-video .close-pop-up {
   cursor: pointer;
 }
-.hero .pop-up .pop-up-video .close-pop-up img {
+.hero .container .promo-video .pop-up .pop-up-video .close-pop-up img {
   background-color: white;
   height: 44px;
   padding: 10px;
   border-radius: 34px;
+}
+.hero .container .promo-video .youtube {
+  display: flex;
+  gap: 15px;
+  background-color: rgba(52, 98, 226, 0.8274509804);
+  padding: 10px;
+  border-radius: 38px;
+  cursor: pointer;
+}
+.hero .container .promo-video .youtube .play-btn {
+  max-width: 38px;
+  border-radius: 38px;
+  background-color: #F6F9FE;
+}
+.hero .container .promo-video .youtube .link {
+  text-decoration: underline;
 }
 
 .why {
@@ -94,7 +85,7 @@
 .why .container {
   padding: 50px;
   background-color: #F6F9FE;
-  border-radius: 50px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -111,7 +102,7 @@
   width: 50%;
 }
 .why .container .why-section .why-image img {
-  border-radius: 50px;
+  border-radius: 20px;
 }
 .why .container .inverse {
   flex-direction: row-reverse;
@@ -355,36 +346,25 @@
 }
 @media screen and (max-width: 540px) {
   .hero {
-    overflow: unset;
-    overflow-x: hidden;
-    height: auto;
-    padding-top: 300px;
-  }
-  .hero::after {
-    right: -400px;
+    padding-top: 50px;
   }
   .hero .container {
-    gap: 50px;
+    gap: 10px;
   }
   .hero .container .intro {
     width: 100%;
-    background-color: rgba(245, 245, 245, 0.831);
-    padding: 30px;
-    border-radius: 20px;
   }
   .hero .container .intro .buttons {
     display: flex;
     flex-direction: column;
   }
-  .hero .container .social-proof {
-    row-gap: 20px;
-  }
-  .hero .container .social-proof .proof {
-    font-size: 16px;
+  .hero .container .promo-video {
+    height: 220px;
     width: 100%;
   }
-  .hero .container .social-proof .proof .icon {
-    width: 29px;
+  .hero .container .promo-video .pop-up .pop-up-video {
+    height: 300px;
+    width: 100%;
   }
   .why {
     padding: 50px 0;

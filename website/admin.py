@@ -11,6 +11,10 @@ class blogAdmin(admin.ModelAdmin):
     list_display = ('title', 'category', 'author', 'date_created', 'status')
     prepopulated_fields = {"slug": ("title",)}
 
+@admin.register(Feature)
+class featureAdmin(admin.ModelAdmin):
+    list_display = ('news_paper', 'title', 'date_featured')
+
 @admin.register(Category)
 class categoryAdmin(admin.ModelAdmin):
     list_display = ('category','slug')
